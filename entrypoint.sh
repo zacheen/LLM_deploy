@@ -7,7 +7,7 @@ ollama serve &
 # Check to see if the Llama3 LLM is available
 echo "Waiting for Facebook's Open Source Llama3 downloads"
 sleep 5 # Necessary if server is not yet up
-ollama pull llama3
+ollama pull qwen3.5
 
 # Start the streamlit server, blocking exit
 echo "Starting the Streamlit server"

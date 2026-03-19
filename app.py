@@ -21,6 +21,6 @@ for msg in st.session_state.messages:
 if prompt := st.chat_input():
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.chat_message("user").write(prompt)
-    msg = ollama.chat(model='llama3', messages=[{'role':'user', 'content': prompt}])['message']['content']
+    msg = ollama.chat(model='qwen3.5', messages=[{'role':'user', 'content': prompt}])['message']['content']
     st.session_state.messages.append({"role": "assistant", "content": msg})
     st.chat_message("assistant").write(msg)
